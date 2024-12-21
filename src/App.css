@@ -1,0 +1,47 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+/* Apply styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: lighter;
+  align-items: start;
+  justify-content: start;
+  background-color: white;
+  color: black;
+  font-family: 'Roboto', sans-serif; /* Use the Google Font */
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+
+.shipping{
+  margin: 20px 100px;
+}
+
+.shipping-h1,.shipping-p{
+  margin: 20px 0;
+}
+
+.shipping-h3{
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+.shipping-span{
+  font-weight: bolder;
+  font-family: sans-serif;
+}
+
+.shipping-li{
+  list-style: disc;
+  margin: 10px 0;
+}
+
+@media screen and (width < 700px) {
+  .shipping{
+    margin: 20px;
+  }
+}

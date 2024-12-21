@@ -1,0 +1,148 @@
+.product-container{
+    display: flex;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.product-image{
+    width: 35%;
+}
+
+.product-details{
+  margin-top: 50px;
+    width: 50%;
+}
+
+.product-title{
+    font-size: 22px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+  }
+  
+  .current-price {
+    font-size: 1.2rem;
+    font-weight: 12;
+    margin: 10px 10px 10px 0;
+  }
+  
+  .product-sitdesc{
+    font-size: 12px;
+    color: #999;
+  }
+
+  .select-size{
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .product-sitdesc2, .product-sitdesc2 p{
+    font-size: 1.1rem;
+    max-width: 800px;
+    line-height: 3rem;
+    display: block;
+    color: #999;
+    margin: auto;
+  }
+
+  .top-products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .show-products{
+    width: 25%;
+  }
+
+  .show-products img{
+    aspect-ratio: 4/4;
+    width: 100%;
+  }
+
+  .show-products p{
+    font-size: 18px;
+  }
+
+  .product-sitdesc2 h5{
+    font-size: 30px;
+    color: black;
+    margin: 20px 0;
+  }
+
+  .product-sitdesc2 h3{
+    font-size: 25px;
+    color: black;
+    margin: 20px 0;
+  }
+
+  .size-input{
+    outline: none;
+    background: none;
+    box-shadow: none;
+    padding: 5px;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    width: 70%;
+    border-radius: 5px;
+    border: #FF5D80 2px solid;
+  }
+
+
+  .buy-button{
+    outline: none;
+    background: none;
+    box-shadow: none;
+    padding: 10px;
+    font-size: 16px;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    width: 50%;
+    border-radius: 2px;
+    color: white;
+    background-color: black;
+  }
+
+  .old-price {
+    font-size: 1rem;
+    text-decoration: line-through;
+    color: #999;
+  }
+
+
+  @media screen and (width<= 700px) {
+    .product-sitdesc2{
+      margin: 20px;
+    }
+
+    .product-container{
+        display: grid;
+        justify-content: center;
+    }
+
+    .product-image{
+        width: 100%;
+    }
+    
+    .product-details{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .buy-button, .select-size{
+      width: 100%;
+    }
+
+    .product-sitdesc2 p,.product-sitdesc2{
+      color: black;
+    }
+
+    .show-products{
+      width: 45%;
+    }
+  }

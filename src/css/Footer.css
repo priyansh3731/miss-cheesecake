@@ -1,0 +1,116 @@
+:root{
+    --bg: wheat;
+}
+
+.footer-container{
+    max-width: 100%;
+    padding: 20px 100px;
+    background-size: contain;
+    background-position: center center;
+    background-color: var(--bg);
+    display: flex;
+    gap: 4rem;
+    justify-content: space-around;
+    color: white;
+    font-size: 15px;
+}
+
+.links-list{
+    list-style: none;
+    background-color: var(--bg);
+}
+
+.links-list li{
+    padding: 5px 0;
+}
+
+.footer-title{
+    margin: 25px 0;
+    font-size: 20px;
+    font-weight: 900;
+    background-color: transparent;
+}
+
+.normal-p{
+    margin: 25px 0;
+    background-color: transparent;
+}
+
+.quick-links{
+    width: 20%;
+    background-color: var(--bg);
+}
+
+.newsletter{
+    width: 15%;
+    background-color: var(--bg);
+}
+
+.contact-us{
+    width: 30%;
+    background-color: var(--bg);
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin: 20px 0;
+    color: black;
+    border: 2px solid var(--bg);
+    background-color: var(--bg);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .input-field {
+    /* width: calc(100% - 40px);  */
+    width: 100%;
+    padding: 10px;
+    font-size: medium;
+    background-color: var(--bg);
+    border: none;
+    color: white;
+  }
+  
+  .input-button {
+    width: 40px; /* Adjust button width */
+    height: 100%;
+    padding: 10px;
+    border: none;
+    background-color: transparent; /* Button background color */
+    color: white;
+    border-radius: 0 10px 10px 0; /* Rounded corners */
+    cursor: pointer;
+    font-size: medium;
+  }
+  
+
+@media screen and (width<= 700px) {
+   .footer-container{
+    display: block;
+    padding: 20px;
+   } 
+
+   .quick-links{
+    width: 80%;
+    margin: 20px;
+    }
+
+    .newsletter{
+    width: 80%;
+    margin: 20px;
+    }
+
+    .contact-us{
+    width: 80%;
+    margin: 20px;
+    }
+
+    .input-container{
+     width: 60%;
+    }
+
+    .input-field{
+    width: 100%;
+    }
+}
