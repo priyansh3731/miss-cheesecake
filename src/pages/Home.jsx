@@ -342,7 +342,7 @@ const App = () => {
             scrollTrigger: {
               trigger: ".second-section",
               start: "-10% 100%",
-              end: "50% 50%",
+              end: "-20% 50%",
               scrub: true,
             },
           });
