@@ -347,7 +347,7 @@ const App = () => {
             },
           });
     
-          tlSmall.to("#cookie", { top: "100%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
+          tlSmall.to("#cookie", { top: "120%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
           tlSmall.to("#chips", { width: "10vw", top: "130%", left: "75%" }, "cookie");
   
         },
@@ -402,11 +402,7 @@ const App = () => {
               <h2>TASTE THE DIFFERENCE.</h2>
               <div className="sub-heading">Real Eggs, Real Butter, Real Sugar.</div>
               <p>
-              1) *Butter Cookies*: Classic and indulgent, our butter cookies are made with 100% pure butter, giving them a rich, melt-in-your-mouth texture. These golden delights offer a perfectly balanced sweetness and a luxurious, buttery flavor in every bite.<br /><br />
-
-2) *Cashew Pista Cookies*: Nutty and flavorful, these cookies are loaded with crunchy cashews and pistachios. Perfectly balanced with a hint of sweetness, they offer a delightful combination of rich, roasted nut flavors for a satisfying treat.<br /><br />
-
-3) *Jaggery Cookies*: Naturally sweetened with jaggery and enriched with sesame seeds, these cookies are both sugar-free and wholesome. With their warm, earthy flavors, they’re perfect for those seeking a guilt-free, nutritious indulgence.<br /><br />
+              Miss Cheesecake is a delightful dessert brand founded by two passionate individuals, Pooja Balani and Narpat Singh Rathore. Pooja, with her love for fine desserts and a keen eye for detail, brings a creative touch to every cheesecake she crafts. Narpat, on the other hand, brings his extensive knowledge of business and operations, ensuring that each customer experiences the highest quality and service.
               </p>
             </div>
           </div>
