@@ -341,13 +341,13 @@ const App = () => {
           const tlSmall = gsap.timeline({
             scrollTrigger: {
               trigger: ".second-section",
-              start: "-10% 80%",
+              start: "-10% 100%",
               end: "50% 50%",
               scrub: true,
             },
           });
     
-          tlSmall.to("#cookie", { top: "140%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
+          tlSmall.to("#cookie", { top: "120%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
           tlSmall.to("#chips", { width: "10vw", top: "130%", left: "75%" }, "cookie");
   
         },
