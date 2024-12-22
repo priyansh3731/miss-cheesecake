@@ -347,7 +347,7 @@ const App = () => {
             },
           });
     
-          tlSmall.to("#cookie", { top: "120%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
+          tlSmall.to("#cookie", { top: "100%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
           tlSmall.to("#chips", { width: "10vw", top: "130%", left: "75%" }, "cookie");
   
         },
@@ -360,7 +360,7 @@ const App = () => {
             scrollTrigger: {
               trigger: ".second-section",
               start: "-10% 100%",
-              end: "50% 50%",
+              end: "30% 50%",
               scrub: true,
             },
           });
@@ -402,11 +402,11 @@ const App = () => {
               <h2>TASTE THE DIFFERENCE.</h2>
               <div className="sub-heading">Real Eggs, Real Butter, Real Sugar.</div>
               <p>
-                Cookie Co. was founded in 2020 during the height of the Covid-19 pandemic
-                by Elise and Matt Thomas. Working behind the scenes to open the first Cookie
-                Co. location, Elise baked her signature cookie recipes using real eggs, real
-                butter, and real cane sugar in her home, preparing hundreds of boxes weekly
-                by hand for driveway pick-up.
+              1) *Butter Cookies*: Classic and indulgent, our butter cookies are made with 100% pure butter, giving them a rich, melt-in-your-mouth texture. These golden delights offer a perfectly balanced sweetness and a luxurious, buttery flavor in every bite.<br /><br />
+
+2) *Cashew Pista Cookies*: Nutty and flavorful, these cookies are loaded with crunchy cashews and pistachios. Perfectly balanced with a hint of sweetness, they offer a delightful combination of rich, roasted nut flavors for a satisfying treat.<br /><br />
+
+3) *Jaggery Cookies*: Naturally sweetened with jaggery and enriched with sesame seeds, these cookies are both sugar-free and wholesome. With their warm, earthy flavors, they’re perfect for those seeking a guilt-free, nutritious indulgence.<br /><br />
               </p>
             </div>
           </div>
