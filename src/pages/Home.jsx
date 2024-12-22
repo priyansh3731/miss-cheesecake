@@ -316,7 +316,7 @@ const App = () => {
     //     },"cookism")
     // },
   
-      "(max-width: 768px)": function () {
+      "(width < 768px)": function () {
         // Small screens animation
         const tlSmall = gsap.timeline({
           scrollTrigger: {
@@ -354,7 +354,7 @@ const App = () => {
         // t2Small.to("#cookism", { rotate: "-30deg" }, "cookism");
       },
   
-      "all": function () {
+      "width > 768px": function () {
         // Common settings for all screen sizes if needed
         const tlSmall = gsap.timeline({
           scrollTrigger: {
@@ -368,29 +368,7 @@ const App = () => {
         tlSmall.to("#cookie", { top: "140%", left: "10%", rotate: "30%" }, "cookie");
         tlSmall.to("#chips", { width: "10vw", top: "120%", left: "90%" }, "cookie");
   
-        const t2Small = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".third-section",
-            start: "top bottom",
-            end: "50% 50%",
-            scrub: true,
-          },
-        });
-  
-        t2Small.to(
-          "#cookie",
-          {
-            top: "240%",
-            left: "50%",
-            width: "15vw",
-            rotate: "-30deg",
-          },
-          "cookism"
-        );
-  
-        t2Small.from("#cookism", { rotate: "0" }, "cookism");
-        t2Small.to("#cookism", { rotate: "-30deg" }, "cookism");
-      },
+      }
     });
   
     return () => {
