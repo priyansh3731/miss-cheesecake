@@ -167,6 +167,8 @@ const OrderProduct = () => {
   
   
     useEffect(() => {
+        document.body.style.overflow = "";
+
         const sumofarray = Productsdata.map(({ variants, qtn }) => parseInt(variants[0].price) * qtn);
         const sum = sumofarray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
         setPrice(sum);

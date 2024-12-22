@@ -334,39 +334,43 @@ const App = () => {
   ScrollTrigger.refresh();
   
     // GSAP Animations with Breakpoints
-    ScrollTrigger.matchMedia({
-      "(width < 768px)": function () {
-        // Small screens animation
-        const tlSmall = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".second-section",
-            start: "20% 100%",
-            end: "50% 50%",
-            scrub: true,
-          },
-        });
+    if(window.innerWidth<768){
+      ScrollTrigger.matchMedia({
+        "all": function () {
+          // Small screens animation
+          const tlSmall = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".second-section",
+              start: "-10% 80%",
+              end: "50% 50%",
+              scrub: true,
+            },
+          });
+    
+          tlSmall.to("#cookie", { top: "140%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
+          tlSmall.to("#chips", { width: "10vw", top: "130%", left: "75%" }, "cookie");
   
-        tlSmall.to("#cookie", { top: "120%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
-        tlSmall.to("#chips", { width: "10vw", top: "130%", left: "75%" }, "cookie");
-
-      },
-  
-      "width > 768px": function () {
-        // Common settings for all screen sizes if needed
-        const tlSmall = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".second-section",
-            start: "top bottom",
-            end: "50% 50%",
-            scrub: true,
-          },
-        });
-  
-        tlSmall.to("#cookie", { top: "140%", left: "10%", rotate: "30%" }, "cookie");
-        tlSmall.to("#chips", { width: "10vw", top: "120%", left: "90%" }, "cookie");
-  
-      }
-    });
+        },
+      });
+    }else{
+      ScrollTrigger.matchMedia({
+        "all": function () {
+          // Common settings for all screen sizes if needed
+          const tlSmall = gsap.timeline({
+            scrollTrigger: {
+              trigger: ".second-section",
+              start: "-10% 100%",
+              end: "50% 50%",
+              scrub: true,
+            },
+          });
+    
+          tlSmall.to("#cookie", { top: "140%", left: "10%", rotate: "30%" }, "cookie");
+          tlSmall.to("#chips", { width: "10vw", top: "120%", left: "90%" }, "cookie");
+    
+        }
+      });
+    }
   
     return () => {
       locoScroll.destroy();
