@@ -1,277 +1,198 @@
-/* Reset some default styles */
-body, html, #root {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: white;
-    color: black;
-  }
-  
-  /* Header and navigation styles */
-  .nav-container {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    /* padding: 20px; */
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* img {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+} */
+
+.hero-section {
+  height: 100vh;
+}
+
+.hero-section .container {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+.hero-section .container .hero-content {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.hero-section .container .hero-content h1 {
+  font-size: 20.5vw;
+  color: #552c10;
+}
+.hero-section .container .hero-content .cookie,
+.hero-section .container .hero-content .choco-chips,
+.hero-section .container .hero-content .peanut,
+.hero-section .container .hero-content .gem {
+  position: absolute;
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.1));
+  transition: all 0.1s;
+  background-color: transparent;
+}
+.hero-section .container .hero-content .cookie {
+  width: 22vw;
+  transform: rotate(-60deg);
+  z-index: 1;
+}
+.hero-section .container .hero-content .choco-chips {
+  width: 12vw;
+  top: 60%;
+  left: 35%;
+  z-index: 0;
+}
+.hero-section .container .hero-content .peanut {
+  left: 90%;
+  top: 45%;
+  transform: translate(-40%, -90%);
+  width: 12vw;
+  z-index: 0;
+}
+.hero-section .container .hero-content .gem {
+  left: 4%;
+  top: 60%;
+  width: 3vw;
+}
 
 
-  .sidebar2{
-    margin-block-start: 0;
-    margin-block-end: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 80vw;
-    transform: translateX(-100%);
-    transition: transform 0.5s ease-in-out;
-    z-index: 999;
-  }
-
-  .open {
-    transform: translateX(0);
-    margin-block-start: 0;
-    margin-block-end: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 80vw;
-    transition: transform 0.5s ease-in-out;
-    z-index: 999;
-  }
 
 
-  .close-btn{
-    all:unset;
-    color: black;
-    margin: 50px 0 20px 30px;
-    font-size: 22px;
-  }
 
-  .link-list{
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-  }
 
-  .nav-lists{
-    line-height: 60px;
-    letter-spacing: 5px;
-    margin: 0 30px;
-    list-style: none;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 22px;
-  }
 
-  .nav-lists, li{
-    background-color: transparent;
-  }
 
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.second-section,
+.third-section {
+  height: 100vh;
+  /* background-color: rgba(85, 44, 16, 0.2); */
+}
+.second-section .container,
+.third-section .container {
+  height: 100%;
+}
+.second-section .container .content-wrapper,
+.third-section .container .content-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.second-section .container .content-wrapper .img-section,
+.third-section .container .content-wrapper .img-section {
+  flex-basis: 50%;
+}
+.second-section .container .content-wrapper .content-section,
+.third-section .container .content-wrapper .content-section {
+  flex-basis: 50%;
+}
+.second-section .container .content-wrapper .content-section h2,
+.third-section .container .content-wrapper .content-section h2 {
+  font-size: 5vw;
+  line-height: 1;
+  color: #552c10;
+}
+.second-section .container .content-wrapper .content-section .sub-heading,
+.third-section .container .content-wrapper .content-section .sub-heading {
+  font-size: 1.5vw;
+  margin: 1vh 0 2vh;
+  color: #552c10;
+}
+.second-section .container .content-wrapper .content-section p,
+.third-section .container .content-wrapper .content-section p {
+  line-height: 30px;
+}
 
-  .sideimage{
-    margin-left: 20px;
-  }
+.third-section {
+  background-color: #fff;
+}
+.third-section .product-card {
+  background-color: #552c10;
+  color: #fff;
+  text-align: center;
+  flex-basis: 30%;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding: 5vh 2vh;
+  border-radius: 30px;
+  position: relative;
+}
+.third-section .product-card h4 {
+  font-size: 2vw;
+}
+.third-section .product-card .cta-btn {
+  color: #fff;
+  margin-top: 1.5rem;
+}
+.third-section .product-card .cta-btn:hover {
+  background-color: #fff;
+  color: #552c10;
+}
+.third-section .product-card .cooki-sm {
+  width: 13vw;
+  position: absolute;
+  top: -35%;
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.1));
+  transition: all 0.1s;
+}
 
-  .logo{
-    display: flex;
-    padding: 5px 20px;
-    justify-content: center;
-    align-items: center;
-  }
+/* Responsive Design */
+@media (width < 768px) {
 
-  .logo img{
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .logo-name{
-    padding: 20px 0 0 0;
-    font-size: 16px;
-  }
-  
-  .cart-icon {
-    font-size: 20px;
-    margin-right: 20px;
-  }
-
-  .input-container2 {
-    display: flex;
-    width: 250px;
-    margin: 20px 0;
-    color: black;
-    gap: 2px;
-    padding: 5px;
-    box-shadow: rgba(0, 0, 0, 0.32) 0px 3px 3px, rgba(0, 0, 0, 0.23) 0px 3px 3px;
-    overflow: hidden;
-    border-radius: 5px;
-  }
-  
-  .input-field2 {
-    /* width: calc(100% - 40px);  */
-    width: 90%;
-    font-size: medium;
-    outline: none;
-    border: none;
-    color: black;
-  }
-  
-  .input-button2 {
-    width: 20px;
-    height: 100%;
-    border: none;
-    outline: none;
-    padding: 0;
-    background-color: transparent; /* Button background color */
-    color: white;
-    border-radius: 0 10px 10px 0; /* Rounded corners */
-    cursor: pointer;
-    font-size: medium;
-  }
-
-  .input-button2 img{
-    padding: 0;
-  }
-  
-  .addtocart {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 35px;
-  }
-  
-  .navbar div {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .kashmiri-kesar-product-container{
-    padding: 20px;
-  }
-
-  .kashmiri-kesar-product-container img{
-    display: block;
-    width: 100%;
+  .cookie {
+    width: 100vw;
   }
 
-  .product-type{
-    font-size: 12px;
-    color: grey;
-    font-weight: bold;
+  .choco-chips {
+    width: 20vw;
+    top: 50%;
+    left: 30%;
   }
 
-  .compare-price{
-    color: grey;
-    text-decoration: line-through;
+  .peanut {
+    width: 18vw;
+    left: 80%;
+    top: 40%;
   }
 
-  .rupee-symbol{
-    font-size: 20px;
-    font-weight: bold;
+  .gem {
+    width: 5vw;
+    top: 70%;
+    left: 10%;
   }
 
-  .add-button{
-    outline: none;
-    background: none;
-    box-shadow: none;
-    border-radius: 2px;
-    padding: 10px;
-    font-size: 16px;
-    margin: 10px 0;
-    font: inherit;
-    color: inherit;
-    width: 100%;
-    border: 1px solid black;
-    background-color: white;
+  .second-section .container .content-wrapper,
+  .third-section .container .content-wrapper {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .qty-button{
-    background-color: white;
-    padding: 0;
+  .third-section .product-card {
+    height: 25vh;
+    width: 80%;
+    margin: 2vh auto;
   }
 
-  .qty-container{
-    font-size: 20px;
-    font-weight: lighter;
-    width: 50%;
-    border: 1px solid black;
-    display: flex;
-    padding: 8px;
-    margin: 10px 0;
-    justify-content: space-around;
+  .cta-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.8rem;
   }
-
-  .heading{
-    font-size: 25px;
-    padding: 0 20px;
-    border: none;
-  }
-
-
-  .buy-button2{
-    outline: none;
-    background: none;
-    box-shadow: none;
-    padding: 10px;
-    font-size: 16px;
-    margin: 0;
-    font: inherit;
-    color: inherit;
-    width: 100%;
-    border-radius: 2px;
-    color: white;
-    background-color: black;
-  }
-
-  .product-card-price-container{
-    font-size: 14px;
-    display: flex;
-    width: 100%;
-  }
-
-  @media screen and (width > 700px) {
-    .kashmiri-kesar-product-container{
-      display: flex;
-      width: 70%;
-      justify-content: space-around;
-      margin: auto;
-    }
-
-    .kashmiri-kesar-product-container img{
-      margin: 0;
-      width: 50%;
-    }
-
-    .detail-container{
-      width: 300px;
-    }
-
-    .product-card-price-container{
-      font-size: 16px;
-    }
-
-    .sidebar2 , .open{
-      width: 40vw;
-    }
-
-    .logo-name{
-      font-size: 20px;
-      padding: 0;
-    }
-
-    .cart-icon{
-      margin: 0;
-    }
-  }
+}

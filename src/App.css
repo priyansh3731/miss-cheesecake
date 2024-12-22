@@ -16,6 +16,13 @@
   font-weight: 400;
 }
 
+html, body {
+  height: 100%; /* Ensures the root element and body have a fixed height */
+  margin: 0;
+  overflow: hidden; /* Prevents content from overflowing */
+}
+
+
 
 .shipping{
   margin: 20px 100px;
@@ -38,6 +45,10 @@
 .shipping-li{
   list-style: disc;
   margin: 10px 0;
+}
+
+img{
+  background-color: transparent;
 }
 
 @media screen and (width < 700px) {
