@@ -288,7 +288,7 @@ const OrderProduct = () => {
 
                             <h2>Shipping method</h2>
                             <div>
-                                <div className="checkbox-container">
+                                {/* <div className="checkbox-container">
                                     <input
                                         className="checkbox-section"
                                         type="checkbox"
@@ -296,7 +296,7 @@ const OrderProduct = () => {
                                         onChange={handleChange}
                                     />
                                     <p>Cash on Delivery <br />This shipping option is eligible for Cash on Delivery.</p>
-                                </div>
+                                </div> */}
                                 <div className="checkbox-container">
                                     <input
                                         className="checkbox-section"
