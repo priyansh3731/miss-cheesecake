@@ -36,6 +36,16 @@
   font-size: 20.5vw;
   color: #552c10;
 }
+
+
+.product-heading{
+  font-size: 10vw;
+  color: #552c10;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
 .hero-section .container .hero-content .cookie,
 .hero-section .container .hero-content .choco-chips,
 .hero-section .container .hero-content .peanut,

@@ -213,7 +213,6 @@
 // export default App;
 
 
-import React, { useEffect } from "react";
 import "../css/home.css"; // Include your CSS styles
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -223,11 +222,77 @@ import chocochips from '../assets/choco-chips.png'
 import peanut from '../assets/peanut.png'
 import gem from '../assets/gem.png'
 import Navbar from '../component/Navbar';
+import Footer from '../component/Footer';
+import { useNavigate } from "react-router-dom";
+import React, { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../context/ProductContext';
+import { database, onValue, ref } from '../config';  
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
+
+
+  const navigate = useNavigate();
+  const [products, setProduct] = useState([]);
+  const [qty, setQty] = useState(1);
+  const [qty1, setQty1] = useState(1);
+  const { Productsdata, setProductsData } = useContext(ProductContext);
+
+  const qtyHandler=()=>{
+    if(qty != 1){
+      setQty(qty => qty-1)
+    }
+  }
+
+  const qtyHandler1=()=>{
+    if(qty1 != 1){
+      setQty1(qty1 => qty1-1)
+    }
+  }
+
+  const orderHandler=(product, quantity)=>{
+    // Find the index of the existing product in the Productsdata array
+    const productIndex = Productsdata.findIndex(data => data.id === product.id);
+
+    // Create a new array to avoid direct state mutation
+    const updatedProductsData = [...Productsdata];
+
+    if (productIndex !== -1) {
+        // Product exists in the cart, so update its quantity
+        updatedProductsData[productIndex] = {
+            ...updatedProductsData[productIndex],
+            qtn: updatedProductsData[productIndex].qtn + quantity
+        };
+    } else {
+        // Product does not exist in the cart, so add it with the given quantity
+        updatedProductsData.push({ ...product, qtn: quantity });
+    }
+
+    // Update the state with the new array
+    setProductsData(updatedProductsData);
+  
+  }
+
+  // Fetch products from database
+  useEffect(() => {
+    const productsRef = ref(database, 'products');
+    onValue(productsRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        const productsArray = Object.keys(data).map(key => ({
+          id: key,
+          ...data[key]
+        }));
+        setProduct(productsArray);
+        console.log(productsArray)
+      }
+    });
+  }, []); // This effect runs once on component mount
+
+
+
   useEffect(() => {
     const scrollContainer = document.querySelector(".smooth-scroll");
 
@@ -270,52 +335,6 @@ const App = () => {
   
     // GSAP Animations with Breakpoints
     ScrollTrigger.matchMedia({
-    //   "(min-width: 1367px)": function () {
-    //     // first section
-    //     var tl = gsap.timeline({scrollTrigger:{
-    //         trigger: ".second-section",
-    //         start: "20% 100%",
-    //         end: "50% 50%",
-    //         scrub: true,
-    //         // markers: true
-    //     }})
-
-    //     tl.to("#cookie", {
-    //         top: "138%",
-    //         left: "0%",
-    //         rotate: "50%"
-    //     },'cookie')
-
-    //     tl.to("#chips", {
-    //         width: "8vw",
-    //         top: "125%",
-    //         left: "88%"
-    //     },'cookie')
-
-    //     // second seciton
-    //     var t2 = gsap.timeline({scrollTrigger:{
-    //         trigger: ".third-section",
-    //         start: "20% 100%",
-    //         end: "50% 50%",
-    //         scrub: true,
-    //         // markers: true
-    //     }})
-
-    //     t2.to('#cookie',{
-    //         top: "237%",
-    //         left: "43%",
-    //         width: "13vw",
-    //         rotate: "-50deg"
-    //     },"cookism")
-
-    //     t2.from('#cookism',{
-    //         rotate: "0"
-    //     },"cookism")
-    //     t2.to('#cookism',{
-    //         rotate: "-50deg"
-    //     },"cookism")
-    // },
-  
       "(width < 768px)": function () {
         // Small screens animation
         const tlSmall = gsap.timeline({
@@ -329,29 +348,7 @@ const App = () => {
   
         tlSmall.to("#cookie", { top: "120%", left: "10%", rotate: "30%", width:"80vw" }, "cookie");
         tlSmall.to("#chips", { width: "10vw", top: "130%", left: "75%" }, "cookie");
-  
-        // const t2Small = gsap.timeline({
-        //   scrollTrigger: {
-        //     trigger: ".third-section",
-        //     start: "top bottom",
-        //     end: "50% 50%",
-        //     scrub: true,
-        //   },
-        // });
-  
-        // t2Small.to(
-        //   "#cookie",
-        //   {
-        //     top: "240%",
-        //     left: "50%",
-        //     width: "15vw",
-        //     rotate: "-30deg",
-        //   },
-        //   "cookism"
-        // );
-  
-        // t2Small.from("#cookism", { rotate: "0" }, "cookism");
-        // t2Small.to("#cookism", { rotate: "-30deg" }, "cookism");
+
       },
   
       "width > 768px": function () {
@@ -412,26 +409,25 @@ const App = () => {
         </div>
       </section>
 
-      <section className="third-section slide slide3" id="slide3">
-        <div className="container">
-          <div className="content-wrapper">
-            <div className="product-card">
-              <img src="src/assets/frosted-sugar.webp" alt="Frosted Sugar" className="cooki-sm" id="cookism" />
-              <h4>FROSTED SUGAR</h4>
-              <a href="#" className="cta-btn">Buy Now</a>
-            </div>
-            <div className="product-card">
-              <h4>MONSTER</h4>
-              <a href="#" className="cta-btn">Buy Now</a>
-            </div>
-            <div className="product-card">
-              <img src="src/assets/oreo.webp" alt="Oreo" className="cooki-sm" id="cookism" />
-              <h4>OREO</h4>
-              <a href="#" className="cta-btn">Buy Now</a>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <h1 className="product-heading">Best Products</h1>
+
+
+      <div className="top-products">
+     {
+     products.map((topProducts)=>{
+      if(topProducts && topProducts.images && topProducts.images[0] && topProducts.images[0].src){return <div key={topProducts.id} className="show-products">
+          <img src={topProducts.images[0].src} onClick={()=>navigate(`/${topProducts.id}`)} />
+          <p style={{fontSize:"10px"}}>{topProducts.title}</p>
+          <div className='product-card-price-container'><span>₹ </span>{topProducts.variants[0].price} <span>₹ </span><span className='compare-price'>{topProducts.variants[0].compare_at_price}</span></div>
+      </div>
+      }
+  })
+    }
+    </div>
+
+    <div style={{height:"50px"}}></div>
+    <Footer />
     </div>
   );
 };
