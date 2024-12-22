@@ -229,37 +229,44 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   useEffect(() => {
-    const locoScroll = new LocomotiveScroll({
-      el: document.querySelector(".smooth-scroll"),
+    const scrollContainer = document.querySelector(".smooth-scroll");
+
+  if (!scrollContainer) return;
+
+  const locoScroll = new LocomotiveScroll({
+    el: scrollContainer,
+    smooth: true,
+    multiplier: 1,
+    smartphone: {
       smooth: true,
-      multiplier: 1,
-    });
-  
-    locoScroll.on("scroll", ScrollTrigger.update);
-  
-    ScrollTrigger.scrollerProxy(".smooth-scroll", {
-      scrollTop(value) {
-        return arguments.length
-          ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
-          : locoScroll.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          top: 0,
-          left: 0,
-          width: window.innerWidth,
-          height: window.innerHeight,
-        };
-      },
-      pinType: document.querySelector(".smooth-scroll").style.transform
-        ? "transform"
-        : "fixed",
-    });
-  
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    ScrollTrigger.defaults({ scroller: ".smooth-scroll" });
-  
-    ScrollTrigger.refresh();
+    },
+    tablet: {
+      smooth: true,
+    },
+  });
+
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+  ScrollTrigger.scrollerProxy(scrollContainer, {
+    scrollTop(value) {
+      return arguments.length
+        ? locoScroll.scrollTo(value, { duration: 0, disableLerp: true })
+        : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+    pinType: scrollContainer.style.transform ? "transform" : "fixed",
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+  ScrollTrigger.defaults({ scroller: scrollContainer });
+  ScrollTrigger.refresh();
   
     // GSAP Animations with Breakpoints
     ScrollTrigger.matchMedia({
