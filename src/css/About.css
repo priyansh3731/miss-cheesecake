@@ -1,0 +1,121 @@
+/* Importing the Montserrat font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap");
+
+/* Global reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Body and page background */
+body {
+  background-color: #f5f5f5;
+  color: #552c10;
+}
+
+/* Main about-us container */
+.about-us {
+  padding: 50px 10%;
+  background-color: #fff;
+}
+
+/* Headings */
+.about-us-h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #552c10;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-us-h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #552c10;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Paragraphs */
+.about-us-p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #5c5c5c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Values List */
+.about-us-ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.about-us-li {
+  margin: 10px 0;
+}
+
+/* Style for span used in contact info */
+.about-us-span {
+  font-weight: 600;
+  color: #552c10;
+}
+
+/* Sections */
+.about-us-section {
+  margin-bottom: 40px;
+}
+
+/* Section divider */
+.about-us-section:after {
+  content: '';
+  display: block;
+  margin: 30px auto;
+  width: 60px;
+  height: 2px;
+  background-color: #552c10;
+}
+
+/* Visit Us Section */
+.about-us .about-us-section:last-of-type {
+  background-color: #f9f9f9;
+  padding: 30px;
+}
+
+.about-us-p strong {
+  font-weight: 600;
+  color: #552c10;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us {
+    padding: 20px;
+  }
+
+  .about-us-h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-us-h2 {
+    font-size: 2rem;
+  }
+
+  .about-us-p {
+    font-size: 0.9rem;
+  }
+
+  .about-us-ul {
+    padding-left: 20px;
+  }
+
+  .about-us-span {
+    font-size: 0.9rem;
+  }
+}
+
+
