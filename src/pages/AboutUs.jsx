@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../component/Navbar';
 import Footer from '../component/Footer';  // Import Footer component
 import '../css/About.css'
+import team from '../assets/team.jpeg'
 
 const AboutUs = () => {
   return (
@@ -9,6 +10,14 @@ const AboutUs = () => {
       <Navbar />
       <div className="about-us">
         <h1 className="about-us-h1">About Miss Cheesecake</h1>
+
+        <section className="about-us-section">
+          <h2 className="about-us-h2">Directors | founders</h2>
+          <p className="about-us-p">
+          Pooja balani | Narpath singh rathor
+          </p>
+          <img src={team} />
+        </section>
 
         <section className="about-us-section">
           <h2 className="about-us-h2">Our Story</h2>
