@@ -10,13 +10,14 @@ const Footer=()=>{
 return<div className="footer-container">
 
         <div className="newsletter">
-            <p className="footer-title">Social Links</p>
+            <p className="footer-title">Links</p>
             <ul className="wrapper">
       <li className="icon facebook">
         <span className="tooltip">Facebook</span>
         <svg
           viewBox="0 0 320 512"
           height="1.2em"
+          width="1.5em"
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -40,6 +41,8 @@ return<div className="footer-container">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="1.2em"
+          width="1.5em"
+
           fill="currentColor"
           className="bi bi-instagram"
           viewBox="0 0 16 16"
