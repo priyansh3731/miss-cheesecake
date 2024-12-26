@@ -16,6 +16,9 @@ const AboutUs = () => {
           <p className="about-us-p">
           Pooja balani | Narpath singh rathor
           </p>
+          <p className="about-us-p">
+          Business established on 11 November 2023
+          </p>
           <img src={team} />
         </section>
 
