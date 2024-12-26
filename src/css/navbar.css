@@ -64,7 +64,7 @@ body, html, #root {
 
   }
 
-  .link-list li{
+  .link-list a{
     background-color: transparent;
   }
 
