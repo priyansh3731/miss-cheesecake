@@ -9,17 +9,17 @@ body, html, #root {
   }
   
   /* Header and navigation styles */
-  .nav-container {
-    width: 100%;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    /* padding: 20px; */
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+.nav-container {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 
 
   .sidebar2{
@@ -60,6 +60,8 @@ body, html, #root {
     list-style: none;
     display: flex;
     gap: 2rem;
+    background-color: transparent;
+
   }
 
   .nav-lists{
@@ -81,6 +83,11 @@ body, html, #root {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url('../assets/nav.png'); /* Replace with your image URL */
+  background-size: cover; /* Adjusts the image to cover the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  /* Optionally add a fallback background color */
   }
 
   .sideimage{
@@ -92,6 +99,7 @@ body, html, #root {
     padding: 5px 20px;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
   }
 
   .logo img{
@@ -102,12 +110,15 @@ body, html, #root {
   .logo-name{
     padding: 20px 0 0 0;
     font-size: 16px;
+    background-color: transparent;
   }
   
   
   .cart-icon {
     font-size: 20px;
     margin-right: 20px;
+    background-color: transparent;
+
   }
 
   .input-container2 {
