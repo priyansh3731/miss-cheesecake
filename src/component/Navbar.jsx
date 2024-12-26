@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"; // Import Link for navigation
 import bag from "../assets/shopping-bag.png";
 import menu from "../assets/menu.png";
 import send from "../assets/search-interface-symbol.png";
+import NavImage from "./NavImage";
 
 const Navbar = () => {
     const navigate = useNavigate();
@@ -25,6 +26,7 @@ const Navbar = () => {
 
     return (
         <div className="nav-container">
+            <NavImage />
             {screenWidth < 700 ? (
                 <>
                     <nav className="navbar">
@@ -36,12 +38,12 @@ const Navbar = () => {
                             alt="Menu"
                         />
                         <div className="logo">
-                            <img
+                            {/* <img
                                 src={logo}
                                 width={80}
                                 alt="Logo"
                                 onClick={() => { navigate("/") }}
-                            />
+                            /> */}
                             <p className="logo-name">Miss Cheesecake</p>
                         </div>
                         <div className="cart-icon" onClick={() => { navigate("/order") }}>
@@ -65,12 +67,12 @@ const Navbar = () => {
                 <>
                     <nav className="navbar">
                         <div className='logo'>
-                            <img
+                            {/* <img
                                 src={logo}
                                 width={80}
                                 alt="Logo"
                                 onClick={() => { navigate("/") }}
-                            />
+                            /> */}
                             <div className="logo-name">Miss Cheesecake</div>
                         </div>
 

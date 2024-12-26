@@ -68,6 +68,20 @@ body, html, #root {
     background-color: transparent;
   }
 
+  .nav-image{
+    background-image: url('../assets/nav.png'); /* Replace with your image URL */
+  background-size: cover; /* Adjusts the image to cover the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  /* Optionally add a fallback background color */
+  }
+
+  .nav-image img{
+    width: 80px;
+    display: block;
+    margin: auto;
+  }
+
   .nav-lists{
     line-height: 60px;
     letter-spacing: 5px;
@@ -87,11 +101,6 @@ body, html, #root {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('../assets/nav.png'); /* Replace with your image URL */
-  background-size: cover; /* Adjusts the image to cover the entire element */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  /* Optionally add a fallback background color */
   }
 
   .sideimage{

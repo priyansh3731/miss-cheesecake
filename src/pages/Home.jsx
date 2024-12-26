@@ -228,7 +228,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ProductContext } from '../context/ProductContext';
 import { database, onValue, ref } from '../config';  
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
