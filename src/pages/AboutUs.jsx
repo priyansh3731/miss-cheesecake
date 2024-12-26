@@ -12,14 +12,14 @@ const AboutUs = () => {
         <h1 className="about-us-h1">About Miss Cheesecake</h1>
 
         <section className="about-us-section">
-          <h2 className="about-us-h2">Directors | founders</h2>
+          <h2 className="about-us-h2">Directors | Founders</h2>
+          <img src={team} />
           <p className="about-us-p">
           Pooja balani | Narpath singh rathor
           </p>
           <p className="about-us-p">
           Business established on 11 November 2023
           </p>
-          <img src={team} />
         </section>
 
         <section className="about-us-section">
