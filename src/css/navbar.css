@@ -79,7 +79,8 @@ body, html, #root {
   .nav-image img{
     width: 80px;
     display: block;
-    margin: auto;
+    margin-left: 20px;
+    margin-top: 5px;
   }
 
   .nav-lists{
