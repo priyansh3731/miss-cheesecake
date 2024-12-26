@@ -64,6 +64,10 @@ body, html, #root {
 
   }
 
+  .link-list li{
+    background-color: transparent;
+  }
+
   .nav-lists{
     line-height: 60px;
     letter-spacing: 5px;
