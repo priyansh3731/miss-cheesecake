@@ -5,8 +5,6 @@ const TermsAndConditions=()=>{
     return<>
     <Navbar />
     <div className="shipping">
-        <p className="shipping-p">misscheesecake.co.in ("Miss Cheesecake" or "website" or "we" or "our") is the shopping website of Miss Cheesecake that allows consumers to browse, select and purchase naturally grow saffron (“Products” or “Goods”) from the website.</p>
-
         <p className="shipping-p">Miss Cheesecake provides services to you subject to the terms and conditions included in this Terms of Use and other customer service pages to help make your shopping experience with Miss Cheesecake as enjoyable and problem-free as possible. Please read them carefully. By visiting or using this website or service, you acknowledge that you have read and understood, and agree to be bound by, these Terms of Use. You also agree to comply with all applicable laws and regulations, including Copyright and Trademark laws.</p>
 
         <p className="shipping-p">If you do not agree to these terms, please do not use misscheesecake.co.in web site.</p>

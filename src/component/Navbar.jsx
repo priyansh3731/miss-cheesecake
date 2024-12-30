@@ -55,7 +55,7 @@ const Navbar = () => {
                         <ul className="nav-lists">
                             <li onClick={() => { navigate("/") }}>Home</li>
                             <li onClick={() => { navigate("/order") }}>Order</li>
-                            <li onClick={() => { navigate("/shiping-policy") }}>Shipping Policy</li>
+                            <li onClick={() => { navigate("/shipping-policy") }}>Shipping Policy</li>
                             <li onClick={() => { navigate("/terms-and-conditions") }}>Terms And Conditions</li>
                             <li onClick={() => { navigate("/privacy-and-policy") }}>Privacy And Policy</li>
                             <li><Link to="/about-us">About Us</Link></li> {/* About Us link */}
@@ -100,7 +100,7 @@ const Navbar = () => {
                         <ul className="nav-lists">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/order">Order</Link></li>
-                            <li><Link to="/shiping-policy">Shipping Policy</Link></li>
+                            <li><Link to="/shipping-policy">Shipping Policy</Link></li>
                             <li><Link to="/terms-and-conditions">Terms And Conditions</Link></li>
                             <li><Link to="/privacy-and-policy">Privacy And Policy</Link></li>
                             <li><Link to="/about-us">About Us</Link></li> {/* About Us link */}
