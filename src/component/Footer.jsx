@@ -62,7 +62,7 @@ return<div className="footer-container">
         </div>
 
 
-        <div className="quick-links">
+        {/* <div className="quick-links">
             <p className="footer-title">Account</p>
             <ul className="links-list">
                 <li>My Account</li>
@@ -71,7 +71,7 @@ return<div className="footer-container">
                 <li>Wishlist</li>
                 <li>Shop</li>
             </ul>
-        </div>
+        </div> */}
 
 
         <div className="quick-links">

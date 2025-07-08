@@ -46,9 +46,9 @@ const Navbar = () => {
                             /> */}
                             <p className="logo-name">Miss Cheesecake</p>
                         </div>
-                        <div className="cart-icon" onClick={() => { navigate("/order") }}>
+                        {/* <div className="cart-icon" onClick={() => { navigate("/order") }}>
                             <img src={bag} width={25} alt="Cart" />
-                        </div>
+                        </div> */}
                     </nav>
                     <div className={`${isSidebarOpen ? 'open' : 'sidebar2'}`}>
                         <button className="close-btn" onClick={toggleSidebar}>X</button>
@@ -80,11 +80,11 @@ const Navbar = () => {
                             <li><Link to="/">Home</Link></li> {/* Use Link for navigation */}
                             <li><Link to="/about-us">About Us</Link></li> {/* About Us link */}
                             <li><Link to="/contact-us">Contact Us</Link></li> {/* Link to Contact page */}
-                            <li><Link to="/signup">Sign Up</Link></li> {/* Link to Sign Up page */}
+                            {/* <li><Link to="/signup">Sign Up</Link></li> Link to Sign Up page */}
                         </ul>
 
                         <div className="cart-icon">
-                            {screenWidth > 1000 ? (
+                            {/* {screenWidth > 1000 ? (
                                 <div className="input-container2">
                                     <input className="input-field2" placeholder="What Are You Looking For?" />
                                     <button className="input-button2">
@@ -92,7 +92,7 @@ const Navbar = () => {
                                     </button>
                                 </div>
                             ) : null}
-                            <img src={bag} className="addtocart" onClick={() => { navigate("/order") }} width={25} alt="Cart" />
+                            <img src={bag} className="addtocart" onClick={() => { navigate("/order") }} width={25} alt="Cart" /> */}
                         </div>
                     </nav>
                     <div className={`${isSidebarOpen ? 'open' : 'sidebar2'}`}>
